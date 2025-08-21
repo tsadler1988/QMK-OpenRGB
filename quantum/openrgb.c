@@ -38,130 +38,131 @@
 #endif
 
 RGB                  g_openrgb_direct_mode_colors[DRIVER_LED_TOTAL] = {[0 ... DRIVER_LED_TOTAL - 1] = {OPENRGB_DIRECT_MODE_STARTUP_GREEN, OPENRGB_DIRECT_MODE_STARTUP_RED, OPENRGB_DIRECT_MODE_STARTUP_BLUE}};
-static const uint8_t openrgb_rgb_matrix_effects_indexes[]           = {
-    1,  2,
-
-#ifndef DISABLE_RGB_MATRIX_ALPHAS_MODS
-    3,
-#endif
-#ifndef DISABLE_RGB_MATRIX_GRADIENT_UP_DOWN
-    4,
-#endif
-#ifndef DISABLE_RGB_MATRIX_GRADIENT_LEFT_RIGHT
-    5,
-#endif
-#ifndef DISABLE_RGB_MATRIX_BREATHING
-    6,
-#endif
-#ifndef DISABLE_RGB_MATRIX_BAND_SAT
-    7,
-#endif
-#ifndef DISABLE_RGB_MATRIX_BAND_VAL
-    8,
-#endif
-#ifndef DISABLE_RGB_MATRIX_BAND_PINWHEEL_SAT
-    9,
-#endif
-#ifndef DISABLE_RGB_MATRIX_BAND_PINWHEEL_VAL
-    10,
-#endif
-#ifndef DISABLE_RGB_MATRIX_BAND_SPIRAL_SAT
-    11,
-#endif
-#ifndef DISABLE_RGB_MATRIX_BAND_SPIRAL_VAL
-    12,
-#endif
-#ifndef DISABLE_RGB_MATRIX_CYCLE_ALL
-    13,
-#endif
-#ifndef DISABLE_RGB_MATRIX_CYCLE_LEFT_RIGHT
-    14,
-#endif
-#ifndef DISABLE_RGB_MATRIX_CYCLE_UP_DOWN
-    15,
-#endif
-#ifndef DISABLE_RGB_MATRIX_CYCLE_OUT_IN
-    16,
-#endif
-#ifndef DISABLE_RGB_MATRIX_CYCLE_OUT_IN_DUAL
-    17,
-#endif
-#ifndef DISABLE_RGB_MATRIX_RAINBOW_MOVING_CHEVRON
-    18,
-#endif
-#ifndef DISABLE_RGB_MATRIX_CYCLE_PINWHEEL
-    19,
-#endif
-#ifndef DISABLE_RGB_MATRIX_CYCLE_SPIRAL
-    20,
-#endif
-#ifndef DISABLE_RGB_MATRIX_DUAL_BEACON
-    21,
-#endif
-#ifndef DISABLE_RGB_MATRIX_RAINBOW_BEACON
-    22,
-#endif
-#ifndef DISABLE_RGB_MATRIX_RAINBOW_PINWHEELS
-    23,
-#endif
-#ifndef DISABLE_RGB_MATRIX_RAINDROPS
-    24,
-#endif
-#ifndef DISABLE_RGB_MATRIX_JELLYBEAN_RAINDROPS
-    25,
-#endif
-#ifndef DISABLE_RGB_MATRIX_HUE_BREATHING
-    26,
-#endif
-#ifndef DISABLE_RGB_MATRIX_HUE_PENDULUM
-    27,
-#endif
-#ifndef DISABLE_RGB_MATRIX_HUE_WAVE
-    28,
-#endif
-#if defined(RGB_MATRIX_FRAMEBUFFER_EFFECTS) && !defined(DISABLE_RGB_MATRIX_TYPING_HEATMAP)
-    29,
-#endif
-#if defined(RGB_MATRIX_FRAMEBUFFER_EFFECTS) && !defined(DISABLE_RGB_MATRIX_DIGITAL_RAIN)
-    30,
-#endif
-#if defined RGB_MATRIX_KEYREACTIVE_ENABLED && !defined DISABLE_RGB_MATRIX_SOLID_REACTIVE_SIMPLE
-    31,
-#endif
-#if defined RGB_MATRIX_KEYREACTIVE_ENABLED && !defined DISABLE_RGB_MATRIX_SOLID_REACTIVE
-    32,
-#endif
-#if defined RGB_MATRIX_KEYREACTIVE_ENABLED && !defined DISABLE_RGB_MATRIX_SOLID_REACTIVE_WIDE
-    33,
-#endif
-#if defined RGB_MATRIX_KEYREACTIVE_ENABLED && !defined DISABLE_RGB_MATRIX_SOLID_REACTIVE_MULTIWIDE
-    34,
-#endif
-#if defined RGB_MATRIX_KEYREACTIVE_ENABLED && !defined DISABLE_RGB_MATRIX_SOLID_REACTIVE_CROSS
-    35,
-#endif
-#if defined RGB_MATRIX_KEYREACTIVE_ENABLED && !defined DISABLE_RGB_MATRIX_SOLID_REACTIVE_MULTICROSS
-    36,
-#endif
-#if defined RGB_MATRIX_KEYREACTIVE_ENABLED && !defined DISABLE_RGB_MATRIX_SOLID_REACTIVE_NEXUS
-    37,
-#endif
-#if defined RGB_MATRIX_KEYREACTIVE_ENABLED && !defined DISABLE_RGB_MATRIX_SOLID_REACTIVE_MULTINEXUS
-    38,
-#endif
-#if defined RGB_MATRIX_KEYREACTIVE_ENABLED && !defined DISABLE_RGB_MATRIX_SPLASH
-    39,
-#endif
-#if defined RGB_MATRIX_KEYREACTIVE_ENABLED && !defined DISABLE_RGB_MATRIX_MULTISPLASH
-    40,
-#endif
-#if defined RGB_MATRIX_KEYREACTIVE_ENABLED && !defined DISABLE_RGB_MATRIX_SOLID_SPLASH
-    41,
-#endif
-#if defined RGB_MATRIX_KEYREACTIVE_ENABLED && !defined DISABLE_RGB_MATRIX_SOLID_MULTISPLASH
-    42,
-#endif
+static const uint8_t openrgb_rgb_matrix_effects_indexes[]           = { // this?
+    1,  2,  3
 };
+
+// #ifndef DISABLE_RGB_MATRIX_ALPHAS_MODS
+//     3,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_GRADIENT_UP_DOWN
+//     4,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_GRADIENT_LEFT_RIGHT
+//     5,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_BREATHING
+//     6,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_BAND_SAT
+//     7,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_BAND_VAL
+//     8,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_BAND_PINWHEEL_SAT
+//     9,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_BAND_PINWHEEL_VAL
+//     10,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_BAND_SPIRAL_SAT
+//     11,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_BAND_SPIRAL_VAL
+//     12,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_CYCLE_ALL
+//     13,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_CYCLE_LEFT_RIGHT
+//     14,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_CYCLE_UP_DOWN
+//     15,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_CYCLE_OUT_IN
+//     16,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_CYCLE_OUT_IN_DUAL
+//     17,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_RAINBOW_MOVING_CHEVRON
+//     18,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_CYCLE_PINWHEEL
+//     19,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_CYCLE_SPIRAL
+//     20,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_DUAL_BEACON
+//     21,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_RAINBOW_BEACON
+//     22,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_RAINBOW_PINWHEELS
+//     23,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_RAINDROPS
+//     24,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_JELLYBEAN_RAINDROPS
+//     25,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_HUE_BREATHING
+//     26,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_HUE_PENDULUM
+//     27,
+// #endif
+// #ifndef DISABLE_RGB_MATRIX_HUE_WAVE
+//     28,
+// #endif
+// #if defined(RGB_MATRIX_FRAMEBUFFER_EFFECTS) && !defined(DISABLE_RGB_MATRIX_TYPING_HEATMAP)
+//     29,
+// #endif
+// #if defined(RGB_MATRIX_FRAMEBUFFER_EFFECTS) && !defined(DISABLE_RGB_MATRIX_DIGITAL_RAIN)
+//     30,
+// #endif
+// #if defined RGB_MATRIX_KEYREACTIVE_ENABLED && !defined DISABLE_RGB_MATRIX_SOLID_REACTIVE_SIMPLE
+//     31,
+// #endif
+// #if defined RGB_MATRIX_KEYREACTIVE_ENABLED && !defined DISABLE_RGB_MATRIX_SOLID_REACTIVE
+//     32,
+// #endif
+// #if defined RGB_MATRIX_KEYREACTIVE_ENABLED && !defined DISABLE_RGB_MATRIX_SOLID_REACTIVE_WIDE
+//     33,
+// #endif
+// #if defined RGB_MATRIX_KEYREACTIVE_ENABLED && !defined DISABLE_RGB_MATRIX_SOLID_REACTIVE_MULTIWIDE
+//     34,
+// #endif
+// #if defined RGB_MATRIX_KEYREACTIVE_ENABLED && !defined DISABLE_RGB_MATRIX_SOLID_REACTIVE_CROSS
+//     35,
+// #endif
+// #if defined RGB_MATRIX_KEYREACTIVE_ENABLED && !defined DISABLE_RGB_MATRIX_SOLID_REACTIVE_MULTICROSS
+//     36,
+// #endif
+// #if defined RGB_MATRIX_KEYREACTIVE_ENABLED && !defined DISABLE_RGB_MATRIX_SOLID_REACTIVE_NEXUS
+//     37,
+// #endif
+// #if defined RGB_MATRIX_KEYREACTIVE_ENABLED && !defined DISABLE_RGB_MATRIX_SOLID_REACTIVE_MULTINEXUS
+//     38,
+// #endif
+// #if defined RGB_MATRIX_KEYREACTIVE_ENABLED && !defined DISABLE_RGB_MATRIX_SPLASH
+//     39,
+// #endif
+// #if defined RGB_MATRIX_KEYREACTIVE_ENABLED && !defined DISABLE_RGB_MATRIX_MULTISPLASH
+//     40,
+// #endif
+// #if defined RGB_MATRIX_KEYREACTIVE_ENABLED && !defined DISABLE_RGB_MATRIX_SOLID_SPLASH
+//     41,
+// #endif
+// #if defined RGB_MATRIX_KEYREACTIVE_ENABLED && !defined DISABLE_RGB_MATRIX_SOLID_MULTISPLASH
+//     42,
+// #endif
+// };
 static uint8_t raw_hid_buffer[RAW_EPSIZE];
 
 void raw_hid_receive(uint8_t *data, uint8_t length) {
